@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+	{{ title }}
+{% endblock %}
+
+{% block content %}
+	
+	<ul>
+		{% for gato in gatos %}
+			<li>
+				{{ gato.name }}
+			</li>
+		{% endfor %}
+	</ul>
+	
+{% endblock %}
