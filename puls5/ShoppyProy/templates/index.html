@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hello world</title>
+
+	{% load staticfiles %}
+	<title>Prueba de html</title>
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
 	<h1>Hello world</h1>
+	<a href="{% url 'products.views.new_product' %}">new product</a>
 	<ul>
 		{% for pr in product %}
 			<li>
-				{{ pr.name }}
+				<a href="{% url 'products.views.product_detail' pk=pr.pk %}">
+					{{ pr.name }}
+				</a>
 			</li>
 		{% endfor %}
 	</ul>

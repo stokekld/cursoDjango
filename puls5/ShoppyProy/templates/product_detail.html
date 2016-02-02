@@ -1,0 +1,14 @@
+<html>
+<head>
+	{% load staticfiles %}
+	<title>{{ product.name }}</title>
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+	<h1>{{ product.name }}</h1>
+	<h2>{{ product.description }}</h2>
+	<p>
+		{{ product.category }} | {{ product.price }}
+	</p>
+</body>
+</html>
